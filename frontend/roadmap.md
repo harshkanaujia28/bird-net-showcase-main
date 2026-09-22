@@ -1,0 +1,8 @@
+- [ ] Preserve the existing hero, logo, imagery, and visual identity.
+- [ ] Add all 15 services organized into four compact categories.
+- [ ] Improve About content and trust highlights.
+- [ ] Add contact details, Surat visual, validated quote form, and success feedback.
+- [ ] Add persistent WhatsApp and call actions with the supplied links.
+- [ ] Connect navigation and quote actions to all requested anchors.
+- [ ] Update footer, local SEO copy, metadata, and LocalBusiness structured data.
+- [ ] Verify desktop/mobile layout, interactions, overflow, and current build health.
