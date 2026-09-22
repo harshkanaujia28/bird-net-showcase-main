@@ -340,8 +340,7 @@ function HomePage() {
     try {
       setIsSubmitting(true);
 
-      const API_URL =
-        import.meta.env.VITE_API_URL || "http://localhost:5000";
+      const API_URL = "https://bird-net-showcase-main.onrender.com";
 
       const response = await fetch(`${API_URL}/api/contact`, {
         method: "POST",
@@ -658,7 +657,7 @@ function HomePage() {
               <h3 className="text-2xl font-extrabold">Request a Free Quote</h3>
               <div className="mt-7 grid gap-5 sm:grid-cols-2">
                 <label className="grid gap-2 text-sm font-bold">Full Name *<input name="name" required autoComplete="name" className="h-11 min-w-0 rounded-md border border-input bg-background px-3 font-normal outline-none transition focus:border-secondary focus:ring-2 focus:ring-ring/20" placeholder="Your full name" /></label>
-                <label className="grid gap-2 text-sm font-bold">Phone Number *<input name="phone" required type="tel" inputMode="tel" autoComplete="tel" pattern="[0-9+() -]{7,18}" className="h-11 min-w-0 rounded-md border border-input bg-background px-3 font-normal outline-none transition focus:border-secondary focus:ring-2 focus:ring-ring/20" placeholder="Your phone number" /></label>
+                <label className="grid gap-2 text-sm font-bold">Phone Number *<input name="phone" required type="tel" inputMode="tel" autoComplete="tel" className="h-11 min-w-0 rounded-md border border-input bg-background px-3 font-normal outline-none transition focus:border-secondary focus:ring-2 focus:ring-ring/20" placeholder="Your phone number" /></label>
                 <label className="grid gap-2 text-sm font-bold">Email<input name="email" type="email" autoComplete="email" className="h-11 min-w-0 rounded-md border border-input bg-background px-3 font-normal outline-none transition focus:border-secondary focus:ring-2 focus:ring-ring/20" placeholder="Optional" /></label>
                 <label className="grid gap-2 text-sm font-bold">Property Type<select name="propertyType" defaultValue="" className="h-11 min-w-0 rounded-md border border-input bg-background px-3 font-normal outline-none transition focus:border-secondary focus:ring-2 focus:ring-ring/20"><option value="" disabled>Select property type</option>{["Apartment", "House", "Balcony", "Office", "Restaurant", "Hotel", "School", "Hospital", "Commercial Property", "Industrial Property", "Other"].map((item) => <option key={item}>{item}</option>)}</select></label>
                 <label className="grid gap-2 text-sm font-bold sm:col-span-2">Service Required<select name="service" defaultValue="" className="h-11 min-w-0 rounded-md border border-input bg-background px-3 font-normal outline-none transition focus:border-secondary focus:ring-2 focus:ring-ring/20"><option value="" disabled>Select a service</option>{allServiceNames.map((item) => <option key={item}>{item}</option>)}</select></label>
