@@ -339,40 +339,42 @@ function HomePage() {
 
     try {
       setIsSubmitting(true);
+const response = await fetch(
+  "https://formsubmit.co/ajax/birdnetservice20@gmail.com",
+  {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json",
+    },
+    body: JSON.stringify({
+      name: payload.name,
+      phone: payload.phone,
+      email: payload.email,
+      propertyType: payload.propertyType,
+      service: payload.service,
+      message: payload.message,
 
-      const API_URL = "https://bird-net-showcase-main.onrender.com";
-
-      const response = await fetch(`${API_URL}/api/contact`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(payload),
-      });
-
-      const result = await response.json();
-
-      if (!response.ok || !result.success) {
-        throw new Error(result.message || "Something went wrong.");
-      }
-
-      toast.success("Request sent successfully!", {
-        description:
-          "Thank you. Bird Net Surat will contact you shortly.",
-      });
-
-      form.reset();
-    } catch (error) {
-      console.error(error);
-
-      toast.error("Unable to send request", {
-        description:
-          "Please try again or contact us directly on WhatsApp.",
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
+      _subject: `New Quote Request - ${
+        payload.service || "Bird Net Surat"
+      }`,
+      _captcha: "false",
+    }),
   }
+);
+
+const result = await response.json();
+
+if (!response.ok || !result.success) {
+  throw new Error(result.message || "Something went wrong.");
+}
+
+toast.success("Request sent successfully!", {
+  description:
+    "Thank you. Bird Net Surat will contact you shortly.",
+});
+
+form.reset();
 
   const localBusinessSchema = {
     "@context": "https://schema.org",
