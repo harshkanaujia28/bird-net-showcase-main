@@ -660,9 +660,14 @@ function HomePage() {
                 <a href="tel:+919129322730" className="flex items-center gap-4 rounded-md border border-primary-foreground/20 bg-primary-foreground/10 p-5 transition-colors hover:bg-primary-foreground/15"><span className="grid size-11 shrink-0 place-items-center rounded-sm bg-primary-foreground text-primary"><Phone className="size-5" /></span><span><span className="block text-xs font-bold uppercase text-hero-muted">Call us</span><span className="mt-1 block font-bold">+91 91293 22730</span></span></a>
                 <a href={whatsappUrl} target="_blank" rel="noreferrer" className="flex items-center gap-4 rounded-md border border-primary-foreground/20 bg-primary-foreground/10 p-5 transition-colors hover:bg-primary-foreground/15"><span className="grid size-11 shrink-0 place-items-center rounded-full bg-[#25D366] text-white"><WhatsAppIcon className="size-6" /></span><span><span className="block text-xs font-bold uppercase text-hero-muted">WhatsApp</span><span className="mt-1 block font-bold">+91 91293 22730</span></span></a>
               </div>
-              <div className="relative min-h-56 overflow-hidden rounded-md border border-primary-foreground/20 bg-primary-foreground/10 p-6">
-                <div className="absolute inset-0 opacity-15 [background-image:linear-gradient(var(--color-primary-foreground)_1px,transparent_1px),linear-gradient(90deg,var(--color-primary-foreground)_1px,transparent_1px)] [background-size:28px_28px]" />
-                <div className="relative flex h-full min-h-44 flex-col items-center justify-center text-center"><span className="grid size-14 place-items-center rounded-full bg-primary-foreground text-primary shadow-float"><MapPin className="size-7" /></span><p className="mt-5 text-xs font-bold uppercase text-hero-muted">Service Location</p><h3 className="mt-2 text-xl font-bold">Surat, Gujarat, India</h3></div>
+              <div className="relative min-h-56 overflow-hidden rounded-md border border-primary-foreground/20 bg-primary-foreground/10 p-0">
+                <iframe
+                  title="Bird Net Surat Location"
+                  src="https://www.google.com/maps?q=21.136377,72.873179&z=16&output=embed"
+                  className="absolute inset-0 h-full w-full border-0"
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
               </div>
             </motion.div>
             <motion.form {...reveal} onSubmit={handleQuoteSubmit} className="rounded-md bg-card p-6 text-card-foreground shadow-card-hover sm:p-8" noValidate>
